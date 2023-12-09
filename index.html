@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookshelf &mdash; Managing your book properly</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/main.css">
+    
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    
+    <header id="home">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+            </ul>
+        </nav>
+        <div class="jumbotron">
+        </div>
+        <div class="jumbotron">
+            <section class="right mobile">
+                <img src="./assets/img/jumbotron.jpeg"
+                    alt="seorang wanita yang duduk dan menghadap ke depan sambil membuka laptop">
+            </section>
+            <section class="left">
+                <h1 class="title">
+                    My Bookshelf
+                </h1>
+                <div class="subtitle">
+                    <p>
+                        Managing your book properly,
+                    </p>
+                    <p>
+                        Boost your productivity.
+                    </p>
+                </div>
+                <p>
+                    <a href="#manage" class="button-primary">Manage Now</a>
+                </p>
+            </section>
+            <section class="right desktop">
+                <img src="./assets/img/jumbotron.jpeg"
+                    alt="seorang wanita yang duduk dan menghadap ke depan sambil membuka laptop">
+            </section>
+        </div>
+    </header>
+
+    <main id="manage">
+        <section class="search">
+            <form id="searchBook">
+                <input id="searchBookTitle" type="text" placeholder="Search book by title">
+            </form>
+        </section>
+
+        <section class="book-container">
+            <div class="book">
+                <h2 class="h2 text-center">
+                    <span>Book List</span>
+                </h2>
+                <a class="button-add">Add New Book <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-plus-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5m6.5-11a.5.5 0 0 0-1 0V6H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V7H10a.5.5 0 0 0 0-1H8.5z"/>
+                  </svg></a>
+                <div class="form-container">
+                    <form id="book">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input class="form-control" id="title" type="text" placeholder="Book title">
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author</label>
+                            <input class="form-control" id="author" type="text" placeholder="Book author">
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input class="form-control" id="year" type="number" placeholder="Year publish">
+                        </div>
+                        <div class="form-group">
+                            <label for="categories">Kategori</label>
+                            <form>
+                                <input class="form-control" type="checkbox" id="categories1" name="categories-1" value="Action">
+                                <label for="categories1">Action</label>       
+                                <input class="form-control" type="checkbox" id="categories2" name="categories-2" value="Adventure">
+                                <label for="categories2">Adventure</label>       
+                                <input class="form-control" type="checkbox" id="categories3" name="categories-3" value="Horror">
+                                <label for="categories3">Horror</label>                   
+                              </form>
+                             <input class="form-control" id="categories" type="checkbox" placeholder="Categories">
+                        </div>
+                        <div class="form-group">
+                            <input id="isComplete" type="checkbox">
+                            <label for="isComplete">Already read?</label>
+                        </div>
+                        <div class="form-group">
+                            <button class="button-save" id="saveBook" type="button">Save</button>
+                            <button class="button-save" id="updateBook" type="button">Update</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="unfinished-read" class="list-group">
+                </div>
+            </div>
+            <div class="book">
+                <h2 class="h2 text-center">
+                    <span>Finished Read</span>
+                </h2>
+                <a class="button-clear">Clear All <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                  </svg></a>
+                
+                <div id="finished-read" class="list-group">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2023 Addin Hadi Rizal</p>
+    </footer>
+
+    <script src="./assets/main.js"></script>
+</body>
+
+</html>
